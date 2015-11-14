@@ -1,0 +1,21 @@
+/*------------------------------------*\
+    #TYPOGRAPHY_SETTINGS
+\*------------------------------------*/
+
+:root {
+
+--extra-light:           100;
+--light:                 300;
+--normal:                500;
+--bold:                  700;
+--extra-bold:            900;
+
+--noto-font-family:   'Noto Sans', sans-serif;
+
+--base-font-family:      var(--noto-font-family);
+--base-font-weight:      var(--light);
+
+--header-font-family:    var(--noto-font-family);
+--header-font-weight:    var(--extra-bold);
+
+}

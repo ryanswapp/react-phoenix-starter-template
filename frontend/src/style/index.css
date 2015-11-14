@@ -1,0 +1,14 @@
+@import "settings.global";
+@import "settings.colors";
+@import "settings.typography";
+
+@import "generic.reset";
+@import "generic.normalize";
+@import "generic.box-sizing";
+
+
+html,
+body,
+#root {
+	height: 100%;
+}

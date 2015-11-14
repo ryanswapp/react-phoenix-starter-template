@@ -1,4 +1,4 @@
-import style from './style.css';
+import style from './style';
 import React, { PropTypes } from 'react';
 import cn from 'classnames';
 import CSSModules from 'react-css-modules';
@@ -21,7 +21,7 @@ const Flexbox = ({tag = 'div', children, direction, wrap, justify, align, ...pro
 }
 
 Flexbox.propTypes = {
-  direction: PropTypes.oneOf(['column', 'row-reverse']),
+  direction: PropTypes.oneOf(['column', 'row', 'row-reverse']),
   wrap: PropTypes.oneOf(['wrap', 'wrap-reverse']),
   justify: PropTypes.oneOf(['end', 'center', 'space-between']),
   align: PropTypes.oneOf(['start', 'end', 'center', 'stretch']),
