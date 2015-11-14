@@ -1,0 +1,49 @@
+{
+  "name": "super-blog",
+  "version": "1.0.0",
+  "description": "A Super Blog",
+  "scripts": {
+    "start": "node server.js",
+    "lint": "eslint src"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "boilerplate",
+    "hot",
+    "reload",
+    "hmr",
+    "live",
+    "edit",
+    "webpack"
+  ],
+  "author": "Ryan Swapp <ryancswapp@gmail.com> (http://github.com/ryanswapp)",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.0.20",
+    "babel-eslint": "^4.1.3",
+    "babel-loader": "^6.0.1",
+    "babel-preset-es2015": "^6.0.15",
+    "babel-preset-react": "^6.0.15",
+    "babel-preset-stage-0": "^6.0.15",
+    "css-loader": "^0.22.0",
+    "eslint-plugin-react": "^3.6.2",
+    "extract-text-webpack-plugin": "^0.9.1",
+    "react-hot-loader": "^1.3.0",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.1"
+  },
+  "dependencies": {
+    "classnames": "^2.2.0",
+    "history": "^1.13.0",
+    "react": "^0.14.0",
+    "react-css-modules": "^3.6.1",
+    "react-dom": "^0.14.0",
+    "react-router": "^1.0.0"
+  }
+}
