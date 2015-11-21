@@ -1,3 +1,7 @@
+// Things I still need to do:
+
+// 1) Add uglifier plugin for minification
+
 var path = require('path');
 
 var webpack = require('webpack');
@@ -12,13 +16,13 @@ module.exports = {
   entry: [
     'webpack-dev-server/client?http://localhost:3000',
     'webpack/hot/only-dev-server',
-    './src/index'
+    './app/index'
   ],
-  stylePath: path.resolve(__dirname, 'src', 'style'),
+  stylePath: path.resolve(__dirname, 'app', 'style'),
   postcss: function () {
     return [
       cssimport({
-        path: './src/style/index.css',
+        path: './app/style/index.css',
         onImport: function (files) {
           files.forEach(this.addDependency)
         }.bind(this)
@@ -42,7 +46,7 @@ module.exports = {
     loaders: [{
       test: /\.js$/,
       loaders: ['react-hot', 'babel'],
-      include: path.join(__dirname, 'src')
+      include: path.join(__dirname, 'app')
     },
     {
     test: /\.css$/,
@@ -50,13 +54,14 @@ module.exports = {
     }]
   },
   resolve: {
+    root: path.resolve(__dirname),
     extensions: [
       '',
       '.js',
       '.css'
     ],
     modulesDirectories: [
-      'src',
+      'app',
       'node_modules'
     ]
   }
