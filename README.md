@@ -32,6 +32,8 @@ You will notice that there is a ```frontend``` and ```backend``` folder in the n
 ```
 cd frontend
 
+npm install
+
 npm start
 ```
 
@@ -39,7 +41,7 @@ This will start your Webpack Dev Server on port 3000. Next, in your other termin
 ```
 cd backend
 
-mix
+mix deps.get
 
 mix ecto.create
 
