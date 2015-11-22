@@ -32,12 +32,16 @@ You will notice that there is a ```frontend``` and ```backend``` folder in the n
 ```
 cd frontend
 
+npm install
+
 npm start
 ```
 
 This will start your Webpack Dev Server on port 3000. Next, in your other terminal window navigate to the backend app, create the database, and start the server:
 ```
 cd backend
+
+mix deps.get
 
 mix
 
