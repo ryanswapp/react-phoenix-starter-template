@@ -61,17 +61,15 @@ defmodule ReactPhoenix.V1.UserController do
   end
 
   def current_user(conn, %{"jwt" => jwt}) do
-    case Guardian.decode_and_verify(jwt) do
-      { :ok, claims } -> 
-        id = claims["sub"] |> String.replace("User:", "") |> String.to_integer
-        user = Repo.get!(User, id)
+    case Guardian.Plug.current_resource(conn) do
+      nil -> 
+        conn
+        |> put_status(:not_found)
+        |> render(ReactPhoenix.V1.SessionView, "error.json", user: user)
+      user ->
         conn
         |> put_status(:ok)
         |> render("show.json", user: user)
-      { :error, reason } ->
-        conn
-        |> put_status(:not_found)
-        |> render(ApiTest.SessionView, "error.json", error: "Not Found")
     end
   end
 end
