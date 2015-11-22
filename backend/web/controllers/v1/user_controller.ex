@@ -4,7 +4,7 @@ defmodule ReactPhoenix.V1.UserController do
   alias ReactPhoenix.User
 
   # Simple authentication provided by Guardian
-  # This code will check every incoming HTTP request for a JWT in the 
+  # This code will check every incoming HTTP request for a JWT in the
   # 'Authorization' header
   plug Guardian.Plug.EnsureAuthenticated, on_failure: { ReactPhoenix.V1.SessionController, :unauthenticated_api }
 
@@ -60,18 +60,16 @@ defmodule ReactPhoenix.V1.UserController do
     send_resp(conn, :no_content, "")
   end
 
-  def current_user(conn, %{"jwt" => jwt}) do
-    case Guardian.decode_and_verify(jwt) do
-      { :ok, claims } -> 
-        id = claims["sub"] |> String.replace("User:", "") |> String.to_integer
-        user = Repo.get!(User, id)
-        conn
-        |> put_status(:ok)
-        |> render("show.json", user: user)
-      { :error, reason } ->
+  def current_user(conn, _params) do
+    case Guardian.Plug.current_resource(conn) do
+      nil ->
         conn
         |> put_status(:not_found)
         |> render(ApiTest.SessionView, "error.json", error: "Not Found")
+      user ->
+        conn
+        |> put_status(:ok)
+        |> render("show.json", user: user)
     end
   end
 end
