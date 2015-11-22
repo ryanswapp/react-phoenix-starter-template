@@ -23,7 +23,7 @@ git clone https://github.com/ryanswapp/react-phoenix-starter-template.git
 
 Navigate to the directory and remove the git remote:
 ```
-cd react-phoenix-starte-template
+cd react-phoenix-starter-template
 
 git remote rm origin
 ```
@@ -35,9 +35,15 @@ cd frontend
 npm start
 ```
 
-This will start your Webpack Dev Server on port 3000. Next, in your other terminal window navigate to the backend app and start the server:
+This will start your Webpack Dev Server on port 3000. Next, in your other terminal window navigate to the backend app, create the database, and start the server:
 ```
 cd backend
+
+mix
+
+mix ecto.create
+
+mix ecto.migrate
 
 mix phoenix.server
 ```
