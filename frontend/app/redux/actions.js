@@ -74,7 +74,7 @@ Actions.addUser = function addUser(user) {
 
 Actions.logout = function logout() {
   delete localStorage.phoenix_auth_token;
-  
+
   return {
     type: 'LOG_OUT'
   }

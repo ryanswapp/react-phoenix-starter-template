@@ -4,7 +4,7 @@ defmodule ReactPhoenix.V1.UserController do
   alias ReactPhoenix.User
 
   # Simple authentication provided by Guardian
-  # This code will check every incoming HTTP request for a JWT in the 
+  # This code will check every incoming HTTP request for a JWT in the
   # 'Authorization' header
   plug Guardian.Plug.EnsureAuthenticated, on_failure: { ReactPhoenix.V1.SessionController, :unauthenticated_api }
 
