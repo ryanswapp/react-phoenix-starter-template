@@ -65,7 +65,7 @@ defmodule ReactPhoenix.V1.UserController do
       nil -> 
         conn
         |> put_status(:not_found)
-        |> render(ReactPhoenix.V1.SessionView, "error.json", user: user)
+        |> render(ReactPhoenix.V1.SessionView, "error.json", error: "User not found")
       user ->
         conn
         |> put_status(:ok)
