@@ -37,7 +37,7 @@ npm install
 npm start
 ```
 
-This will start your Webpack Dev Server on port 3000. Next, in your other terminal window navigate to the backend app, create the database, and start the server:
+This will start your Webpack Dev Server on port 3000. Next, in your other terminal window navigate to the backend app, create the database, and start the server (note, you may need to add a Postgres role [see this post](http://stackoverflow.com/questions/15301826/psql-fatal-role-postgres-does-not-exist) for a fix):
 ```
 cd backend
 
