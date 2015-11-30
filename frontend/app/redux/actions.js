@@ -83,7 +83,10 @@ Actions.logout = function logout() {
 Actions.getCurrentUser = function getCurrentUser() {
   return dispatch => {
     axios.get('http://localhost:4000/api/v1/current_user', {
-      headers: {'Authorization': localStorage.phoenix_auth_token}
+      headers: {'Authorization': localStorage.phoenix_auth_token},
+      params: {
+        jwt: localStorage.phoenix_auth_token
+      }
     })
       .then(function (response) {
         if (response.status === 200) {

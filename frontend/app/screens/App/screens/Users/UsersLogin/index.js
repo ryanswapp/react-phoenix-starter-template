@@ -6,8 +6,6 @@ import Actions from 'redux/actions.js';
 
 const UserLogin = React.createClass({
   componentDidMount() {
-    this.props.dispatch(Actions.getCurrentUser());
-
     if (this.props.currentUser) {
       this.props.dispatch(pushState(null, "/"));
     }

@@ -9,7 +9,7 @@ defmodule ReactPhoenix.V1.SessionController do
 
         conn
         |> put_status(:created)
-        |> render(ReactPhoenix.V1.SessionView, "show.json", %{jwt: Guardian.Plug.current_token(conn)})
+        |> render(ReactPhoenix.V1.SessionView, "show.json", jwt: Guardian.Plug.current_token(conn))
       :error ->
         conn
         |> put_status(:unprocessable_entity)
