@@ -8,6 +8,17 @@ My goal with this repo is to provide a starter template for those looking to use
 
 This starter template contains a React frontend app and a Phoenix backend API. It is all setup such that you can begin building your application without worrying about setting up all the boilerplate code. There is basic authentication setup using JWT via the Guardian hex package for Phoenix. If you are unfamiliar with how authenticating an API works you're in luck! I'm about to explain it.
 
+Other notable features:
+
+  *  React Router/Redux Router
+  *  Redux
+  *  Webpack
+  *  Hot Code Reload
+  *  Babel
+  *  CSSModule Support
+  *  CSSNext
+  *  PostCSS
+
 ### API Authentication
 
 Authenticating an API is not as complicated as it may seem. The integral part of this is the JWT (JSON Web Token) that we will use to authenticate users on the frontend. Here is an abstract overview of how it works: 
