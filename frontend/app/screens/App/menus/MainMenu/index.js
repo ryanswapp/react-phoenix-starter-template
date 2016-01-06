@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import Actions from 'redux/actions.js';
 import style from './style';
 import CSSModules from 'react-css-modules';
-import Flex from 'screens/util/flexbox/flex';
 import { Link } from 'react-router';
 
 import LoggedInLinks from './screens/LoggedInLinks';

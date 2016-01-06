@@ -1,7 +1,5 @@
 import React from 'react';
 import CSSModules from 'react-css-modules';
-import Flex from 'screens/util/flexbox/flex';
-import CenteredColumn from 'screens/util/flexbox/centered_column';
 import style from './style';
 
 const Home = React.createClass({
